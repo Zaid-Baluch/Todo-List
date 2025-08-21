@@ -3,6 +3,10 @@ var editIndex = -1;
 
 function myTodo() {
   var inputElement = document.getElementById("input-box");
+  if (inputElement.value === "") {
+    alert("please Fill the box");
+  }
+
   todos.push(inputElement.value);
   inputElement.value = "";
   showlist();
@@ -13,11 +17,13 @@ function showlist() {
   listItem.innerHTML = " ";
   for (var i = 0; i < todos.length; i++) {
     listItem.innerHTML += `
-    <li>
-    ${todos[i]}
-    <button onclick="deleteTodo(${i})"><i class="fa-solid fa-trash"></i></button>
-    <button onclick="editTodo(${i})">Edit</button>
-    </li>`;
+      <li class="todo-item">
+        <span class="todo-text">${todos[i]}</span>
+        <div class="todo-actions">
+          <button onclick="editTodo(${i})" class="edit-btn">Edit</button>
+          <button onclick="deleteTodo(${i})" class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </li>`;
   }
 }
 function deleteTodo(index) {
