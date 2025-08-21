@@ -58,3 +58,15 @@ ul li {
   user-select: none;
   cursor: pointer;
 }
+
+#list-container button {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+#list-container button:hover {
+  color: darkred;
+}
