@@ -25,7 +25,7 @@ function deleteTodo(index) {
   showlist();
 }
 
-function editTodo() {
+function editTodo(index) {
   var inputElement = document.getElementById("input-box");
   inputElement.value = todos[index];
   editIndex = index;

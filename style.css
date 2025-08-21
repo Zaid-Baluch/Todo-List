@@ -70,3 +70,10 @@ ul li {
 #list-container button:hover {
   color: darkred;
 }
+
+#updateBtn {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
